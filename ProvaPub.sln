@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub", "ProvaPub.csproj", "{BF0C6C17-A860-47B0-BF84-1FBB2E26742A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub.Api", "ProvaPub.Api.csproj", "{BF0C6C17-A860-47B0-BF84-1FBB2E26742A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub.Application", "..\ProvaPub.Application\ProvaPub.Application.csproj", "{51789C46-C367-4AAE-BC7B-A2EA86524B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub.Domain", "..\ProvaPub.Domain\ProvaPub.Domain.csproj", "{66C44566-26EF-4EEE-B653-39B9ED1E9F56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub.Infrastructure", "..\ProvaPub.Infrastructure\ProvaPub.Infrastructure.csproj", "{FA1751F4-6CCF-45DD-9A5C-4B9CE3AB8956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaPub.Tests", "..\ProvaPub.Tests\ProvaPub.Tests.csproj", "{F9E3ED09-CE66-42C1-9DBF-471D8C61CD72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{BF0C6C17-A860-47B0-BF84-1FBB2E26742A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF0C6C17-A860-47B0-BF84-1FBB2E26742A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF0C6C17-A860-47B0-BF84-1FBB2E26742A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51789C46-C367-4AAE-BC7B-A2EA86524B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51789C46-C367-4AAE-BC7B-A2EA86524B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51789C46-C367-4AAE-BC7B-A2EA86524B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51789C46-C367-4AAE-BC7B-A2EA86524B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C44566-26EF-4EEE-B653-39B9ED1E9F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C44566-26EF-4EEE-B653-39B9ED1E9F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C44566-26EF-4EEE-B653-39B9ED1E9F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C44566-26EF-4EEE-B653-39B9ED1E9F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1751F4-6CCF-45DD-9A5C-4B9CE3AB8956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1751F4-6CCF-45DD-9A5C-4B9CE3AB8956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1751F4-6CCF-45DD-9A5C-4B9CE3AB8956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1751F4-6CCF-45DD-9A5C-4B9CE3AB8956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E3ED09-CE66-42C1-9DBF-471D8C61CD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E3ED09-CE66-42C1-9DBF-471D8C61CD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E3ED09-CE66-42C1-9DBF-471D8C61CD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E3ED09-CE66-42C1-9DBF-471D8C61CD72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

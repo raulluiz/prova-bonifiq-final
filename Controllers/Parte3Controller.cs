@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProvaPub.Models;
-using ProvaPub.Repository;
-using ProvaPub.Services;
+using ProvaPub.Application.DTOs;
+using ProvaPub.Application.Services;
 
 namespace ProvaPub.Controllers
 {
@@ -17,19 +15,26 @@ namespace ProvaPub.Controllers
     /// Demonstre como você faria isso.
     /// </summary>
     [ApiController]
-	[Route("[controller]")]
-	public class Parte3Controller :  ControllerBase
-	{
-		[HttpGet("orders")]
-		public async Task<Order> PlaceOrder(string paymentMethod, decimal paymentValue, int customerId)
-		{
-            var contextOptions = new DbContextOptionsBuilder<TestDbContext>()
-    .UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Teste;Trusted_Connection=True;")
-    .Options;
+    [Route("[controller]")]
+    public class Parte3Controller : ControllerBase
+    {
+        private readonly PaymentService _paymentService;
+        public Parte3Controller(PaymentService paymentService)
+        {
+            _paymentService = paymentService;
+        }
 
-            using var context = new TestDbContext(contextOptions);
+        [HttpGet("orders")]
+        public async Task<OrderDto> PlaceOrder(string paymentMethod, decimal paymentValue, int customerId)
+        {
 
-            return await new OrderService(context).PayOrder(paymentMethod, paymentValue, customerId);
-		}
-	}
+            var order = await _paymentService.PayOrder(paymentMethod, paymentValue, customerId);
+
+            var brasilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+            order.OrderDate = TimeZoneInfo.ConvertTimeFromUtc(order.OrderDate, brasilTimeZone);
+
+            return order;
+
+        }
+    }
 }
